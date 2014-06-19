@@ -21,6 +21,7 @@
 		CB36DF5E1952EA2E006DD4AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB36DF401952EA2E006DD4AD /* UIKit.framework */; };
 		CB36DF661952EA2E006DD4AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB36DF641952EA2E006DD4AD /* InfoPlist.strings */; };
 		CB36DF681952EA2E006DD4AD /* VariableCellTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB36DF671952EA2E006DD4AD /* VariableCellTableViewTests.m */; };
+		CB36DF73195325A7006DD4AD /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB36DF72195325A7006DD4AD /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CB36DF631952EA2E006DD4AD /* VariableCellTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VariableCellTableViewTests-Info.plist"; sourceTree = "<group>"; };
 		CB36DF651952EA2E006DD4AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB36DF671952EA2E006DD4AD /* VariableCellTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariableCellTableViewTests.m; sourceTree = "<group>"; };
+		CB36DF71195325A7006DD4AD /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		CB36DF72195325A7006DD4AD /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				CB36DF521952EA2E006DD4AD /* ViewController.m */,
 				CB36DF541952EA2E006DD4AD /* Images.xcassets */,
 				CB36DF431952EA2E006DD4AD /* Supporting Files */,
+				CB36DF71195325A7006DD4AD /* CustomCell.h */,
+				CB36DF72195325A7006DD4AD /* CustomCell.m */,
 			);
 			path = VariableCellTableView;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			files = (
 				CB36DF531952EA2E006DD4AD /* ViewController.m in Sources */,
 				CB36DF4D1952EA2E006DD4AD /* AppDelegate.m in Sources */,
+				CB36DF73195325A7006DD4AD /* CustomCell.m in Sources */,
 				CB36DF491952EA2E006DD4AD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +462,7 @@
 				CB36DF6D1952EA2E006DD4AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB36DF6E1952EA2E006DD4AD /* Build configuration list for PBXNativeTarget "VariableCellTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +471,7 @@
 				CB36DF701952EA2E006DD4AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

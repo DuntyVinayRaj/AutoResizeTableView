@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CustomCell.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tblVariableSize;
@@ -51,18 +52,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"samplecell"];
-    cell.textLabel.text = self.sampleTexts[indexPath.row];
-    cell.textLabel.font = [UIFont systemFontOfSize:18];
-    cell.textLabel.numberOfLines = 0;
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"samplecell"];
+    cell.lblString.text = self.sampleTexts[indexPath.row];
+    cell.lblString.font = [UIFont systemFontOfSize:18];
+    cell.lblString.numberOfLines = 0;
+    [cell.lblString sizeToFit];
+    
+    NSString *text = self.sampleTexts[indexPath.row];
+    CGSize constraint = CGSizeMake(300, 2000.0f);
+    CGRect height;
+    
+    height = [text boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]} context:nil];
+    CGFloat Maxheight = MAX(height.size.height, 44);
+    //cell.lblString.frame = height;
+    
+    CGRect lblFrame = cell.lblString.frame;
+    lblFrame.size.height = Maxheight;
+    cell.lblString.frame = lblFrame;
+   
+    [cell.lblString sizeToFit];
+    //[cell.lblString setFrame:CGRectMake(0, 0, 320, Maxheight)];
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-        NSString *text = self.sampleTexts[indexPath.row];
-        CGSize constraint = CGSizeMake(300, 2000.0f);
+    NSString *text = self.sampleTexts[indexPath.row];
+    CGSize constraint = CGSizeMake(300, 2000.0f);
     CGRect height;
     
     height = [text boundingRectWithSize:constraint options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:18]} context:nil];

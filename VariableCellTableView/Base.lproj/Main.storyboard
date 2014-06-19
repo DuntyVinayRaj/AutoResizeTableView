@@ -21,13 +21,31 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="samplecell" id="LBG-gH-QEB">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="samplecell" id="LBG-gH-QEB" customClass="CustomCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBG-gH-QEB" id="xlJ-fv-Jwq">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEa-AO-SkH">
+                                                    <rect key="frame" x="15" y="11" width="294" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.81960784310000001" green="0.33725490200000002" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xEa-AO-SkH" firstAttribute="leading" secondItem="xlJ-fv-Jwq" secondAttribute="leading" constant="15" id="AYW-Xq-OGn"/>
+                                                <constraint firstAttribute="trailing" secondItem="xEa-AO-SkH" secondAttribute="trailing" constant="11" id="Zhi-yu-TNl"/>
+                                                <constraint firstItem="xEa-AO-SkH" firstAttribute="centerY" secondItem="xlJ-fv-Jwq" secondAttribute="centerY" id="o8E-Js-GNA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblString" destination="xEa-AO-SkH" id="cM6-ip-v1U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
